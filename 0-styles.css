@@ -12,7 +12,6 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
 /* BODY ==== */
@@ -28,7 +27,6 @@ body {
 }
 #menu-btn {
     position: relative;
-    margin-right: 1in;
     display: none;
     justify-content: center;
     align-items: center;
@@ -68,15 +66,15 @@ body {
     transform: translateY(5px);
 }
 
-.burger:checked ~ #menu-btn #menu-burger{
+.burger:checked ~ #menu-container #menu-btn #menu-burger{
     background: rgba(0,0,0,0.0);
 }
 
-.burger:checked ~ #menu-btn #menu-burger::before{
+.burger:checked ~ #menu-container #menu-btn #menu-burger::before{
     transform: rotate(-45deg);
 }
 
-.burger:checked ~ #menu-btn #menu-burger::after{
+.burger:checked ~ #menu-container #menu-btn #menu-burger::after{
     transform: rotate(45deg);
 }
 
@@ -84,7 +82,7 @@ body {
 
 header {
     color: var(--text-color);
-    height: 50rem;
+    height: 60rem;
     background-image: url(/images/headphones_hero_1.jpg);
     background-position: center center;
     background-repeat: no-repeat;
@@ -103,16 +101,11 @@ header {
 .container {
     display: flex;
     flex-direction: row;
+    align-items: center;
     justify-content: space-around;
 }
 
 /* NAV ==== */
-
-#logo-hamburger-container {
-    display: flex;
-    align-content: center;
-    flex-direction: row;
-}
 
 #nav-list{
     margin-top: var(--distance-from-top);
@@ -128,17 +121,35 @@ header {
     font-weight: bold;
 }
 
-@media screen and (max-width: 468px){
-    .container {
-        flex-direction: column;
-        align-items: center;
-    }
+.nav-items:hover, .nav-items:active {
+    color: #FF6565;
+}
 
+@media screen and (max-width: 468px){
+    #menu-container {
+        width: 30%;
+        display: flex;
+        align-items: center;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+    #header-logo {
+        margin-left: 70px;
+    }
     /* NAV QUERY */
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
 
     #nav-list {
         flex-direction: column;
-        opacity: 0;
+        display: none;
+    }
+
+    nav li {
+        margin: 10px;
+        margin
     }
 
     .nav-items {
@@ -150,12 +161,8 @@ header {
         display: flex;
     }
 
-    #nav-list {
-        opacity: 100;
-    }
-
-    .burger:checked ~ nav{
-        opacity: 0;
+    .burger:checked ~ nav #nav-list{
+        display: flex;
     }
 
 }
@@ -163,11 +170,61 @@ header {
 /* HERO ==== */
 
 #hero-section {
-    margin: 10rem;
+    margin: 17%;
     text-align: center;
 }
 
+#hero-part1 {
+    font-weight: bold;
+    margin-bottom: 5%;
+}
 
+#hero-part1 h2{
+    font-size: 27px;
+}
+
+#hero-part2 p{
+    position: relative;
+    margin-top: 8%;
+    margin-right: 25%;
+    margin-left: 25%;
+}
+
+@media screen and (max-width: 830px) {
+    #hero-part1 {
+        font-weight: bold;
+        margin-bottom: 10%;
+    }
+
+    #hero-part2 p{
+        margin-top: 20%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+@media screen and (max-width: 468px){
+    #hero-section {
+        margin-top: 30%;
+    }
+
+    #hero-part1 {
+        font-weight: bold;
+        margin-bottom: 15%;
+    }
+
+    #hero-part1 p{
+        margin: 0px 20px;
+    }
+
+    #hero-part2 p{
+        margin-top: 20%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+/* red buttons */
 .buttons {
     color: var(--text-color);
     font-weight: bold;
@@ -175,10 +232,12 @@ header {
     text-decoration: none;
     text-align: center;
     border-radius: 40px;
-    padding: 2%;
-    padding-right: 5%;
-    padding-left: 5%;
-    font-size: 15px;
+    padding: 10px 25px;
+    font-size: 14px;
+}
+
+.buttons:hover {
+    opacity: 0.9;
 }
 
 /* MAIN ==== */
