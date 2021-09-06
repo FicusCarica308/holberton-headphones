@@ -130,7 +130,7 @@ header {
     color: #FF6565;
 }
 
-@media screen and (max-width: 468px){
+@media screen and (max-width: 480px){
     #menu-container {
         width: 30%;
         display: flex;
@@ -207,7 +207,7 @@ header {
     }
 }
 
-@media screen and (max-width: 468px){
+@media screen and (max-width: 480px){
     #hero-section {
         margin-top: 30%;
     }
