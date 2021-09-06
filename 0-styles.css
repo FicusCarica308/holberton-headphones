@@ -35,6 +35,7 @@ body {
     height: 35px;
     cursor: pointer;
     transition: all .5s ease-in-out;
+    width: 16px;
 }
 
 #menu-burger {
@@ -77,6 +78,10 @@ body {
 .burger:checked ~ #menu-container #menu-btn #menu-burger::after{
     transform: rotate(45deg);
 }
+#menu-btn:hover
+{
+    background:blue;
+}
 
 /* HEADER ==== */
 
@@ -93,7 +98,7 @@ header {
 
 #header-logo {
     margin-top: var(--distance-from-top);
-    width: 161px;
+    width: 150px;
     height: 32px;
 }
 
@@ -149,7 +154,6 @@ header {
 
     nav li {
         margin: 10px;
-        margin
     }
 
     .nav-items {
