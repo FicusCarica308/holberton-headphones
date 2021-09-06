@@ -83,23 +83,13 @@ body {
     background:blue;
 }
 
-/* HEADER ==== */
-
-header {
+/* BACKGROUNDS */
+header, #speak-section {
     color: var(--text-color);
-    height: 60rem;
-    background-image: url(/images/headphones_hero_1.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-}
-
-
-#header-logo {
-    margin-top: var(--distance-from-top);
-    width: 150px;
-    height: 32px;
 }
 
 /* CASCADING */
@@ -108,6 +98,19 @@ header {
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
+}
+
+/* HEADER ==== */
+header {
+    height: 60rem;
+    background-image: url(/images/headphones_hero_1.jpg);
+}
+
+
+#header-logo {
+    margin-top: var(--distance-from-top);
+    width: 150px;
+    height: 32px;
 }
 
 /* NAV ==== */
@@ -189,9 +192,22 @@ header {
     margin: 0 31%;
 }
 
+.main-icons {
+    padding: 30px;
+}
+
+.main-icons span {
+    color: #FF6565;
+    font-size: 100px;
+}
+
+.main-icons p {
+    width: 12rem;
+}
+
 /* WE-DO-SECTION */
 
-#we-do-part2 {
+.main-sections-bodys {
     margin-top: 100px;
     display: flex;
     flex-wrap: wrap;
@@ -199,20 +215,40 @@ header {
     justify-content: space-around;
 }
 
-.we-do-icons span {
-    color: #FF6565;
-    font-size: 100px;
+/* SPEAK SECTION */
+#speak-section{
+    height: 80rem;
+    background-image: url(/images/headphones_hero_2.jpg);
 }
 
-.we-do-icons p {
-    width: 12rem;
+#speak-section .main-sections-headers {
+    margin-top: 20%;
+}
+.pentagons {
+    position: relative;
+}
+.pentagon-image {
+    width: 170px;
+}
+
+.pentagon-contents h1{
+    font-size: 46px;
+}
+
+.pentagon-contents {
+    position: absolute;
+    top: 35%;
+    right: 8%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* MEDIA QUERYS 
 =====================================================
 */
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1030px) {
     .burger:checked ~ nav #nav-list{
         display: flex;
     }
@@ -232,6 +268,12 @@ header {
     /* MAIN SECTION QUERYS */
     .main-sections-headers p{
         margin: 0;
+    }
+
+    /* SPEAK SECTION */
+    #speak-section{
+        height: 110rem;
+        background-image: url(/images/headphones_hero_2.jpg);
     }
 
 }
