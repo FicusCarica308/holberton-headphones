@@ -6,6 +6,9 @@
 * Each one contains multiple "task" files that are usually number in an increasing order from 0
 * In this directory i am creating a css/html design from scratch based of a given Figma board
 
+Figma board:
+* https://www.figma.com/file/gkWRcFqkwtruWZgSfnnHF0/Holberton-School---Headphone-company
+
 ## Files:
 * 0 through 4 - index.html - 5 different iterations of a index.html file with the 4th being the final.\
     0 - added header/hero section\
@@ -22,7 +25,7 @@
 * style.css - this file contains icomoon icons for 2-index.html and 2-styles.css and up
 
 ## Authors
-Manuel Enrique Figueroa - [Github](https://github.com/FicusCarica308)
+Manuel Enrique Figueroa - [Github](https://github.com/FicusCarica308), [LinkedIn](https://www.linkedin.com/in/manuel-figueroa-292216215)
 
 ## License
 Public Domain. No copy write protection.
